@@ -33,6 +33,7 @@ static const char rcsid[] = "$Id: d_main.c,v 1.8 1997/02/03 22:45:09 b1 Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <debug.h>
 
 /// cosmito
 static char padBuf[256] __attribute__((aligned(64)));
@@ -171,7 +172,7 @@ int 		eventtail;
 void D_PostEvent (event_t* ev)
 {
     events[eventhead] = *ev;
-    eventhead = (++eventhead)&(MAXEVENTS-1);
+    eventhead = (eventhead+1)&(MAXEVENTS-1);
 }
 
 
@@ -1042,8 +1043,8 @@ void IdentifyVersionAndSelect (void)        // cosmito
     char *doomwaddir;
 	
 #ifdef _EE
-    extern char elfFilename[100];
-    extern char deviceName[10];
+    //extern char elfFilename[100];
+    //extern char deviceName[10];
     extern char fullPath[256];
 #endif
 
