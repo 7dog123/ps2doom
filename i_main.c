@@ -36,6 +36,7 @@ rcsid[] = "$Id: i_main.c,v 1.4 1997/02/03 22:45:10 b1 Exp $";
 #include <sifrpc.h>
 
 //#ifdef PS2HDD
+#define NEWLIB_PORT_AWARE
 #include <fileio.h>
 #include <fileXio.h>
 #include <debug.h>
