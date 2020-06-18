@@ -1632,9 +1632,9 @@ void D_DoomMain (void)
     scr_printf ("V_Init: allocate screens.\n");
     V_Init ();
 
-	#ifdef _EE
-		SDL_SYS_TimerInit();
-	#endif
+	//#ifdef _EE
+	//	SDL_SYS_TimerInit();
+	//#endif
 
 
     scr_printf ("M_LoadDefaults: Load system defaults.\n");
