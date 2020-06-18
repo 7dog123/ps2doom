@@ -292,7 +292,7 @@ int GetLocalAddress (void)
 //
 void I_InitNetwork (void)
 {
-    boolean		trueval = true;
+    //boolean		trueval = true;
     int			i;
     int			p;
     struct hostent*	hostentry = 0;	// host information entry
