@@ -165,3 +165,4 @@ void SjPCM_Quit()
 	SifCallRpc(&cd0,SJPCM_QUIT,0,(void*)(&sbuff[0]),0,(void*)(&sbuff[0]),0,0,0);
 	sjpcm_inited = 0;
 }
+
