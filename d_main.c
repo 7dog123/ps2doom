@@ -56,7 +56,7 @@ extern const char *hdd_wads_folder;
 extern char		currentWadName[20];
 
 #define R_OK	4
-int access(char *file, int mode)
+static int access(char *file, int mode)
 {
 	FILE *test_fp;
 	test_fp = fopen(file, "r");
