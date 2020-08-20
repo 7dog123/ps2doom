@@ -1,5 +1,5 @@
 #include <tamtypes.h>
-#include <floatlib.h>
+//#include <floatlib.h>
 #include <stdio.h>
 
 int gethostname(char *name, int len)
