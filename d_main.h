@@ -36,6 +36,8 @@
 #define MAXWADFILES             20
 extern char*		wadfiles[MAXWADFILES];
 
+#define PACKAGE_NAME "PS2DOOM"
+
 void D_AddFile (char *file);
 int SDL_SYS_TimerInit(void);
 

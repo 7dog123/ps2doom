@@ -1045,7 +1045,8 @@ printf("added\n");
 		if (W_CheckNumForName(name[i])<0)
 		    I_Error("\nThis is not the registered version.");
     }
-    
+ 
+#if 0
     // Iff additonal PWAD files are used, print modified banner
     if (modifiedgame)
     {
@@ -1060,7 +1061,6 @@ printf("added\n");
 	getchar ();
     }
 	
-
     // Check and print which version is executed.
     switch ( gamemode )
     {
@@ -1087,7 +1087,15 @@ printf("added\n");
 	// Ouch.
 	break;
     }
-
+#endif
+	printf (
+	    "===========================================================================\n"
+	    " " PACKAGE_NAME " is free software, covered by the GNU General Public\n"
+            " License.  There is NO warranty; not even for MERCHANTABILITY or FITNESS\n"
+            " FOR A PARTICULAR PURPOSE. You are welcome to change and distribute\n"
+            " copies under certain conditions. See the source for more information.\n"
+	    "===========================================================================\n"
+	);
     printf ("M_Init: Init miscellaneous info.\n");
     M_Init ();
 
