@@ -39,13 +39,22 @@ jobs:
       with:
         name: doom-${{ steps.slug.outputs.sha8 }}
         path: |
-            *.elf
+            doom.elf
 
-#    - name: Create release
-#      if: github.ref == 'refs/heads/master'
-#      uses: marvinpinto/action-automatic-releases@latest
-#      with:
-#        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#        automatic_release_tag: "latest"
-#        title: "Latest  build"
-#        files: *.elf
+    - name: Create release for master branch
+      if: github.ref == 'refs/heads/master'
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        title: "Latest  build"
+        files: doom.elf
+
+    - name: Create release form main branch
+      if: github.ref == 'refs/heads/main'
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        title: "Latest  Build"
+        files: doom.elf
