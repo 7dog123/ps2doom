@@ -34,7 +34,8 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: doom-${{ steps.slug.outputs.sha8 }}
-        path: *.elf
+        path: |
+            *.elf
 
 #    - name: Create release
 #      if: github.ref == 'refs/heads/master'
