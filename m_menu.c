@@ -510,7 +510,6 @@ void M_ReadSaveStrings(void)
 {
     //FILE           *handle;   /// cosmito : for fioOpen type is s32
     s32 handle;
-    int             count;
     int             i;
     char    name[256];
 	
