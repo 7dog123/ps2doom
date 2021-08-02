@@ -58,6 +58,7 @@ rcsid[] = "$Id: m_menu.c,v 1.7 1997/02/03 22:45:10 b1 Exp $";
 
 #include "m_menu.h"
 
+#include "kernel.h"
 
 
 extern patch_t*		hu_font[HU_FONTSIZE];
@@ -509,7 +510,6 @@ void M_ReadSaveStrings(void)
 {
     //FILE           *handle;   /// cosmito : for fioOpen type is s32
     s32 handle;
-    int             count;
     int             i;
     char    name[256];
 	
