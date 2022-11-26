@@ -1,5 +1,5 @@
 #include <tamtypes.h>
-#include <floatlib.h>
+#include <math.h>
 #include <stdio.h>
 
 int gethostname(char *name, int len)
@@ -12,7 +12,7 @@ u32 inet_addr(const char *cp)
 	return 0;
 }
 
-float pow(float a, float b)
+/*float pow(float a, float b)
 {
 	return powf(a,b);
-}
+}*/
